@@ -9,6 +9,15 @@
 # and unlimited. Package visibility is separate from repository visibility and is
 # not settable from here — set it once, per package, under
 # Packages → sigils-people → Package settings → Change visibility.
+#
+# NOTE: these `paths:` filters do not survive a force-push that replaces history.
+# GitHub computes the changed files from the push event, and an orphan commit has
+# no common ancestor with what it replaced, so nothing matches and no run starts.
+# History here is collapsed deliberately — a metadata change rewrites all 11,880
+# portraits, and keeping every generation would add ~650 MB each time — so after
+# any force-push, dispatch both workflows by hand:
+#
+#   gh workflow run pages.yml && gh workflow run image.yml
 name: image
 
 on:
