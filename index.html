@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sigils people — a cast of 3,960 synthetic portraits</title>
+<meta name="description" content="Nearly four thousand people who do not exist: twenty from each of 198 countries and territories, each with a portrait and a record. Free to use, openly licensed, generated locally.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="site/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230d1016'/><circle cx='8' cy='6' r='3' fill='%236f9cff'/><path d='M2 16c0-3.3 2.7-6 6-6s6 2.7 6 6' fill='%23e4e9f0'/></svg>">
+</head>
+<body>
+
+<a class="skip" href="#sheet" data-i18n="skip">Skip to the portraits</a>
+
+<header class="masthead">
+  <div class="masthead-in">
+    <div class="title-row">
+      <h1>sigils <em>people</em></h1>
+    </div>
+    <p class="lede" data-i18n="lede">
+      Nobody on this page exists. Twenty people from each of 198 countries and
+      territories — a name, an age, a heritage and a face — generated to be used
+      as placeholder people wherever real ones would be a liability.
+    </p>
+    <p class="figures"><span data-count="people">—</span> <span data-i18n="people">people</span> ·
+       <span data-count="countries">—</span> <span data-i18n="countries">countries</span> ·
+       <span data-i18n="threeSizes">three sizes each, AVIF</span> ·
+       <a href="#about" data-i18n="whatFor">what this is for</a></p>
+  </div>
+</header>
+
+<form class="filters" id="filters" role="search" aria-label="Filter the cast">
+  <div class="field grow">
+    <label for="q" data-i18n="search">Search</label>
+    <input type="search" id="q" name="q" autocomplete="off" spellcheck="false"
+           data-i18n-ph="searchPlaceholder" placeholder="name, native name or id">
+  </div>
+  <div class="field">
+    <label for="region" data-i18n="region">Region</label>
+    <select id="region" name="region"><option value="" data-i18n="anywhere">Anywhere</option></select>
+  </div>
+  <div class="field">
+    <label for="country" data-i18n="country">Country</label>
+    <select id="country" name="country"><option value="" data-i18n="anyCountry">Anywhere</option></select>
+  </div>
+  <div class="field">
+    <label for="heritage" data-i18n="heritage">Heritage</label>
+    <select id="heritage" name="heritage"><option value="" data-i18n="anyHeritage">Any</option></select>
+  </div>
+  <div class="field">
+    <label for="sex" data-i18n="sex">Sex</label>
+    <select id="sex" name="sex">
+      <option value="" data-i18n="any">Any</option>
+      <option value="female" data-i18n="female">Female</option>
+      <option value="male" data-i18n="male">Male</option>
+    </select>
+  </div>
+  <div class="field narrow">
+    <label for="amin" data-i18n="ageFrom">Age from</label>
+    <input type="number" id="amin" name="amin" min="0" max="120" inputmode="numeric">
+  </div>
+  <div class="field narrow">
+    <label for="amax" data-i18n="ageTo">to</label>
+    <input type="number" id="amax" name="amax" min="0" max="120" inputmode="numeric">
+  </div>
+  <button type="button" id="clear" class="ghost" data-i18n="clear">Clear</button>
+</form>
+
+<main id="sheet">
+  <p class="result" id="result" role="status" aria-live="polite"></p>
+
+  <div id="grid" class="grid" aria-busy="true">
+    <div class="skeleton" aria-hidden="true"></div>
+  </div>
+
+  <p class="empty" id="empty" hidden>
+    <span data-i18n="noneFound">Nobody matches that.</span>
+    <button type="button" class="link" id="empty-clear" data-i18n="clearFilters">Clear the filters</button>
+  </p>
+
+  <p class="failed" id="failed" hidden>
+    <span data-i18n="loadFailed">The cast index did not load.</span>
+    <button type="button" class="link" id="retry" data-i18n="retry">Try again</button>
+  </p>
+
+  <nav class="pager" id="pager" aria-label="Pages" hidden></nav>
+</main>
+
+<section id="about" class="about">
+  <div class="prose">
+    <h2 data-i18n="aboutTitle">What this is for</h2>
+    <p data-i18n="about1">
+      Every design, demo, test fixture and empty state needs people in it. Using
+      real faces means consent you do not have, licences you did not buy, and a
+      photograph of a real person standing in for something they never agreed to.
+      Using the same four stock portraits makes everything look like the same
+      product. This is the third option: a cast large enough to be plausible,
+      consistent enough to be reusable, and owned by nobody.
+    </p>
+    <h2 data-i18n="madeTitle">How they were made</h2>
+    <p data-i18n="made1">
+      Each person was written first — name, age, sex, naming culture, household
+      and appearance — against per-country rules, then independently reviewed.
+      The portrait comes second and is derived from the record: the prompt is
+      assembled from fixed characteristics rather than free text, and the image
+      seed comes from the person's ID, so the same record always produces the same
+      face. Rendering ran locally on consumer hardware with RealVisXL.
+    </p>
+    <h2 data-i18n="provTitle">Every file says what it is</h2>
+    <p data-i18n="prov1">
+      Each portrait carries an XMP packet naming the person, the country, the
+      prompt, the seed, the model and the render date, marked with IPTC's
+      <code>trainedAlgorithmicMedia</code> digital source type and a plain-words
+      disclaimer. Strip the page away and the file still declares itself
+      synthetic.
+    </p>
+    <h2 data-i18n="useTitle">Using them</h2>
+    <p data-i18n="use1">Portraits are at a predictable path, so you can build the URL yourself:</p>
+    <pre><code>portraits/s/<b>ad-01</b>.avif   256 px
+portraits/m/<b>ad-01</b>.avif   512 px
+portraits/l/<b>ad-01</b>.avif  1024 px</code></pre>
+    <p data-i18n="use2">
+      The record for anyone is in their country's file — <code>people/ad.jsonl</code>,
+      one JSON object per line — and <code>people/index.json</code> holds all of
+      them in a compact form for searching.
+    </p>
+    <h2 data-i18n="licTitle">Licence</h2>
+    <p data-i18n="lic1">
+      Copyright © 2026 Ariel Bravo Ayala. Records and code are MIT; the
+      portraits are CC BY 4.0, and credit is a condition of that licence rather
+      than a courtesy. Credit “Portraits by Ariel Bravo Ayala — sigils-people —
+      CC BY 4.0”, in a colophon or an about screen; every file carries that line
+      in its own metadata. Not for impersonation, harassment, disinformation, or
+      presenting these people as real.
+    </p>
+    <p class="fine" data-i18n="fine">
+      These are not real people. They have no consent to give and no rights to
+      assert, which is the point — but it also means any resemblance to a living
+      person is coincidence, and using one to stand for someone real is a misuse.
+    </p>
+  </div>
+</section>
+
+<dialog id="person" aria-labelledby="person-name">
+  <div class="person">
+    <button type="button" class="close" id="close" aria-label="Close" data-i18n-aria="close">&times;</button>
+    <figure>
+      <img id="person-img" alt="" width="512" height="512" decoding="async">
+      <figcaption id="person-id" class="mono"></figcaption>
+    </figure>
+    <div class="record">
+      <h2 id="person-name"></h2>
+      <dl id="person-facts"></dl>
+      <div class="downloads">
+        <span data-i18n="portrait">Portrait</span>
+        <a id="dl-s" class="mono" download>256</a>
+        <a id="dl-m" class="mono" download>512</a>
+        <a id="dl-l" class="mono" download>1024</a>
+        <a id="report" class="report" rel="noopener" target="_blank"
+           data-i18n="report">Report a problem</a>
+      </div>
+      <details>
+        <summary data-i18n="rawRecord">The whole record</summary>
+        <pre><code id="person-json" class="mono"></code></pre>
+      </details>
+      <p class="fine" data-i18n="notReal">Not a real person. Generated, never photographed.</p>
+      <p class="fine" data-i18n="creditLine">If you use this portrait, credit
+        “Portraits by Ariel Bravo Ayala — sigils-people — CC BY 4.0”. The line is
+        in the file's own metadata too.</p>
+    </div>
+  </div>
+</dialog>
+
+<footer>
+  <p>
+    <a href="https://github.com/ambravo/sigils-people">sigils-people</a> ·
+    <span data-i18n="partOf">part of</span>
+    <a href="https://github.com/ambravo/sigils">sigils</a> ·
+    <span data-count="people">—</span> <span data-i18n="peopleLower">people</span>,
+    <span data-i18n="noneReal">none of them real</span>
+  </p>
+  <p class="credit" data-i18n="credit">
+    Portraits by Ariel Bravo Ayala · CC BY 4.0 · credit required
+  </p>
+</footer>
+
+<script src="site/app.js"></script>
+</body>
+</html>

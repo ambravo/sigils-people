@@ -1,0 +1,116 @@
+Licence for the portraits
+=========================
+
+Copyright © 2026 Ariel Bravo Ayala. All rights reserved except as licensed below.
+
+Applies to everything under `portraits/`. The records, code and site are MIT —
+see LICENSE.
+
+The portraits are licensed under the Creative Commons Attribution 4.0
+International Licence (CC BY 4.0):
+
+    https://creativecommons.org/licenses/by/4.0/
+
+You may copy, redistribute, adapt and build upon them, including commercially,
+**provided you give credit.** Credit is a condition of the licence, not a
+courtesy: use them without it and you have no licence to use them at all.
+
+
+Attribution — required
+----------------------
+
+Reproduce this line, or something that carries the same four things — the
+creator, the source, the licence, and the fact that these people are not real:
+
+    Portraits by Ariel Bravo Ayala — sigils-people — CC BY 4.0.
+    Synthetic people; not photographs of anyone.
+    https://github.com/ambravo/sigils-people
+
+Where a link is possible, link "Ariel Bravo Ayala" or "sigils-people" to
+https://github.com/ambravo/sigils-people and "CC BY 4.0" to
+https://creativecommons.org/licenses/by/4.0/.
+
+In an interface the credit may live in a colophon, credits page, about screen or
+documentation — it does not have to sit on each image. In a publication, print
+or broadcast it goes wherever image credits normally go. What is not acceptable
+is no credit anywhere a reader of the work could reach.
+
+**Every file carries this already.** The creator, the copyright notice and the
+exact credit line are in each portrait's XMP packet, so nobody has to come back
+here to find out who to name:
+
+    exiftool -Creator -Rights -Attribution -Copyright portraits/l/np-04.avif
+
+Stripping that metadata to avoid crediting is a breach of the licence, not a way
+around it.
+
+
+On the model that produced them
+-------------------------------
+
+These images were generated with RealVisXL V5.0 Lightning, released under the
+CreativeML Open RAIL++-M licence. That licence states that the licensor "claims
+no rights in the Output You generate using the Model", and its obligation to
+pass on use restrictions attaches to redistributing the *model or its
+derivatives* — not to images it produced. The CC BY 4.0 grant above is therefore
+a grant that can actually be made.
+
+The use restrictions are nevertheless carried forward here, as terms of this
+dataset rather than as an inherited obligation, because they describe what these
+files should not be used for regardless of who is entitled to say so. The
+attribution requirement above is separate from them: it comes from the CC BY 4.0
+grant, which is mine to make and mine to condition.
+
+
+Acceptable use
+--------------
+
+Do not use these portraits:
+
+ 1. In any way that violates applicable national, federal, state, local or
+    international law or regulation.
+ 2. For the purpose of exploiting, harming or attempting to exploit or harm
+    minors in any way.
+ 3. To generate or disseminate verifiably false information or content with the
+    purpose of harming others.
+ 4. To generate or disseminate personally identifiable information that can be
+    used to harm an individual.
+ 5. To defame, disparage or otherwise harass others.
+ 6. For fully automated decision making that adversely impacts an individual's
+    legal rights or otherwise creates or modifies a binding, enforceable
+    obligation.
+ 7. For any use intended to, or which has the effect of, discriminating against
+    or harming individuals or groups based on online or offline social behaviour
+    or known or predicted personal or personality characteristics.
+ 8. To exploit vulnerabilities of a specific group of persons based on their age,
+    social, physical or mental characteristics, in order to materially distort
+    the behaviour of a person in that group in a manner that causes, or is likely
+    to cause, that person or another person physical or psychological harm.
+ 9. For any use intended to, or which has the effect of, discriminating against
+    individuals or groups based on legally protected characteristics or
+    categories.
+10. To provide medical advice or medical results interpretation.
+11. To generate or disseminate information for use in the administration of
+    justice, law enforcement, immigration or asylum processes, such as predicting
+    that an individual will commit a crime.
+
+And specific to what these files are:
+
+12. Do not present these people as real. Not as a real customer, a real
+    testimonial, a real employee, a real witness, a real profile on a real
+    service, or a real anything. They are unambiguously marked as synthetic in
+    their own metadata; do not strip that marking in order to pass them off.
+13. Do not use a portrait to stand for an identifiable living person, whatever
+    the resemblance.
+
+Items 1–11 follow Attachment A of the CreativeML Open RAIL++-M licence. Items
+12–13 are this dataset's own.
+
+
+No warranty
+-----------
+
+These files are provided as is, without warranty of any kind. They were produced
+by a generative model, and although every portrait is reviewed against its
+record before publication, no such process is perfect. If you find a portrait
+that should not be here, open an issue and it will be withdrawn.
