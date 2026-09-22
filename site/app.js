@@ -53,7 +53,6 @@
       region: "Region", anywhere: "Anywhere", heritage: "Heritage", anyHeritage: "Any",
       wholeRegion: (r) => `All of ${r}`,
       notReal: "Not a real person. Generated, never photographed.",
-      creditLine: "If you use this portrait, credit “Portraits by Ariel Bravo Ayala — sigils-people — CC BY 4.0”. The line is in the file’s own metadata too.",
       credit: "Portraits by Ariel Bravo Ayala · CC BY 4.0 · credit required",
       recordFailed: "That record could not be loaded.",
       f: { country: "Country", age: "Age", sex: "Sex", naming: "Naming culture",
