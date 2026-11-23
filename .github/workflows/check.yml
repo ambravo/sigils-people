@@ -1,0 +1,17 @@
+# Every pull request that touches the records is checked against the contract in
+# CONTRIBUTING.md before a human reads it.
+name: check
+
+on:
+  pull_request:
+    paths: ["people/**", "portraits/**", "check.py"]
+  push:
+    branches: [main]
+    paths: ["people/**", "portraits/**", "check.py"]
+
+jobs:
+  records:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 check.py
